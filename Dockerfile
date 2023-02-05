@@ -1,11 +1,10 @@
-FROM ubuntu:latest
+FROM python:3.10
 
 WORKDIR /webx
 
 COPY requirements.txt ./
 
-RUN apt update && upgrade
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 COPY . .
 
